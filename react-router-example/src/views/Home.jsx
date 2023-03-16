@@ -1,3 +1,5 @@
+import './Home.css';
+
 import { useState, useEffect } from 'react'; 
 
 function Home() {
@@ -15,12 +17,13 @@ function Home() {
     }, []);
 
     const productComponents = products.map((product) => {
-        return <a href={`/produkt/${product.id}`}>{ product.title }</a> });
+        return <a href={`/produkt/${product.id}`} key={ product.id }>{ product.title }</a> });
 
     return (
         <section>
-            <h2>Detta är startsidan.</h2>
-            <nav>
+            <h2>Produkter</h2>
+            <p>Välj en produkt för att läsa mer om den.</p>
+            <nav className='products'>
                 { productComponents }
             </nav>
         </section>
