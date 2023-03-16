@@ -36,7 +36,6 @@ function Product() {
         <section>
             { currentProduct ?
             <article>
-                <img src={ currentProduct.images[0] } />
                 <h2>{ currentProduct.title }</h2>
                 <p>{ currentProduct.description }</p>
                 <p>Pris: { currentProduct.price } kr</p> 
